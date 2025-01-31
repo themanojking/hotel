@@ -11,45 +11,45 @@ function Burger() {
   const burger = [
     {
       id:'6',
-      img: "/Images/pizza-with-cheese-tomatoes.avif",
-      alt: "beefmushroom",
-      name:'Cheese Pizza',
+      img: "/Images/burgerpic.avif",
+      alt: "Burger",
+      name:'Burger',
       com: "SM Cafe",
       rate: "4.0/5.0",
       pri: "$99.00",
     },
     {
       id:'7',
-      img: "/Images/pizza-with-cheese-tomatoes.avif",
-      alt: "beefmushroom",
-      name:'Cheese Pizza',
+      img: "/Images/chickenbur.jpg",
+      alt: "Chicken Burger",
+      name:'Chicken Burger',
       com: "SM Cafe",
       rate: "4.0/5.0",
       pri: "$99.00",
     },
     {
       id:'8',
-      img: "/Images/pizza-with-cheese-tomatoes.avif",
-      alt: "beefmushroom",
-      name:'Cheese Pizza',
+      img: "/Images/vegbur.avif",
+      alt: "Veg Burger",
+      name:'Veg Burger',
       com: "SM Cafe",
       rate: "4.0/5.0",
       pri: "$99.00",
     },
     {
       id:'9',
-      img: "/Images/pizza-with-cheese-tomatoes.avif",
-      alt: "beefmushroom",
-      name:'Cheese Pizza',
+      img: "/Images/meatbur.avif",
+      alt: "Meat Burger",
+      name:'Meat Burger',
       com: "SM Cafe",
       rate: "4.0/5.0",
       pri: "$99.00",
     },
     {
       id:'10',
-      img: "/Images/pizza-with-cheese-tomatoes.avif",
-      alt: "beefmushroom",
-      name:'Cheese Pizza',
+      img: "/Images/fishbur2.avif",
+      alt: "Fish Burger",
+      name:'Fish Burger',
       com: "SM Cafe",
       rate: "4.0/5.0",
       pri: "$99.00",
@@ -67,7 +67,7 @@ function Burger() {
       <Nav />
       <Footnav />
       <div>
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="flex flex-wrap justify-center gap-10 mt-10">
           {burger.map((product) => (
             <div
               key={product.id}
@@ -78,7 +78,7 @@ function Burger() {
                 alt={product.alt}
                 className="rounded-t-2xl "
               ></img>
-              <h1 className="text-xl font-bold px-3 mt-2">{product.name}</h1>
+              <h1 className="text-xl font-bold px-3 mt-2 text-red-600">{product.name}</h1>
               <div className="flex items-center gap-1 text-lg font-semibold px-3">
                 <MdVerified />
                 <h3 className="text-lg font-semibold">{product.com}</h3>

@@ -4,9 +4,13 @@ import { FaArrowRight } from "react-icons/fa";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import { MdVerified } from "react-icons/md";
 import { RiPriceTag3Line } from "react-icons/ri";
+import { FaStar } from "react-icons/fa6";
 import Foot from "../Components/Foot";
 import Title from "../Components/Tittle";
 import Swp from "../Components/Swp";
+import { useDispatch } from "react-redux";
+import { add } from "../store/Cartslice";
+import { FaCartShopping } from "react-icons/fa6";
 
 function Home() {
   const home = [
@@ -54,39 +58,66 @@ function Home() {
 
   const best = [
     {
-      img: "/Images/hamburger.jpg",
+      img: "/Images/pizza-with-cheese-tomatoes.avif",
+      name:'Pizza',
       com: "SM Cafe",
-      star: "4.0/5.0",
+      rate: "4.0/5.0",
       pri: "$99.00",
     },
     {
-      img: "/Images/hamburger.jpg",
+      img: "/Images/chickenpic.avif",
+      name:'Chicken Pizza',
       com: "SM Cafe",
-      star: "4.0/5.0",
+      rate: "4.0/5.0",
       pri: "$99.00",
     },
     {
-      img: "/Images/hamburger.jpg",
+      img: "/Images/burgerpic.avif",
+      name:'Burger',
       com: "SM Cafe",
-      star: "4.0/5.0",
+      rate: "4.0/5.0",
       pri: "$99.00",
     },
     {
-      img: "/Images/hamburger.jpg",
+      img: "/Images/chickenbur.jpg",
+      name:'Chicken Burger',
       com: "SM Cafe",
-      star: "4.0/5.0",
+      rate: "4.0/5.0",
       pri: "$99.00",
     },
     {
-      img: "/Images/hamburger.jpg",
+      img: "/Images/maggi.avif",
+      name:'Maggi',
       com: "SM Cafe",
-      star: "4.0/5.0",
+      rate: "4.0/5.0",
       pri: "$99.00",
     },
     {
-      img: "/Images/hamburger.jpg",
+      img: "/Images/cheesemag.jpg",
+      name:'Cheese Maggi',
       com: "SM Cafe",
-      star: "4.0/5.0",
+      rate: "4.0/5.0",
+      pri: "$99.00",
+    },
+    {
+      img: "/Images/momo.avif",
+      name:'Momo',
+      com: "SM Cafe",
+      rate: "4.0/5.0",
+      pri: "$99.00",
+    },
+    {
+      img: "/Images/mojitopic.avif",
+      name:'Mojito',
+      com: "SM Cafe",
+      rate: "4.0/5.0",
+      pri: "$99.00",
+    },
+    {
+      img: "/Images/icecream.avif",
+      name:'Icecream',
+      com: "SM Cafe",
+      rate: "4.0/5.0",
       pri: "$99.00",
     },
   ];
@@ -141,6 +172,14 @@ function Home() {
       desc: "Beyond a restaurant, we support locals, source locally, and contribute.",
     },
   ];
+
+  const dispatch = useDispatch();
+
+  const addcart = (product) => {
+    dispatch(add(product));
+    console.log(product);
+  };
+
   return (
     <>
       <div>
@@ -150,7 +189,7 @@ function Home() {
             <h1 className="text-3xl font-bold">
               Discover Delight at Fastfood SM
             </h1>
-            <h1 className="text-5xl font-bold">
+            <h1 className="text-3xl lg:text-5xl font-bold">
               Your Go-To Spot for Quick and Tasty Eats!
             </h1>
             <h2 className="text-xl font-semibold">
@@ -158,7 +197,7 @@ function Home() {
               Speed meets flavor in every bite, promising a culinary journey
               that's as swift as it is delicious.
             </h2>
-            <div className="flex items-center gap-2 px-3 py-2 bg-red-500 rounded-2xl w-36">
+            <div className="flex items-center gap-2 px-3 py-2 font-semibold bg-rose-500 rounded-2xl w-36 hover:bg-white text-black border border-pink-500 hover:text-pink-500 hover:-translate-y-1">
               <button className="">Order Now</button>
               <FaArrowRight className="" />
             </div>
@@ -180,42 +219,69 @@ function Home() {
           ))}
         </div>
 
-        <Title
-          title="Best Selling Items"
-          subtitle="Inspect background group content align export move. Background prototype arrange team inspect clip. Vector comment link frame link group."
-        />
+        <div className="py-10">
+           <Title title="Best Selling Items"
+           subtitle="Inspect background group content align export move. Background prototype arrange team inspect clip.Vector comment link frame link group."/>
+          <Swp />
+        </div>
 
-        <div></div>
+        <div className="mt-10">
+          <Title
+            title="Best Selling Items"
+            subtitle="Inspect background group content align export move. Background prototype arrange team inspect clip. Vector comment link frame link group."
+          />
 
-        <div className="lg:px-10 ">
-          <div className="flex flex-wrap justify-center gap-6">
-            {best.map((item) => (
-              <div className="border rounded-2xl shadow-2xl shadow-purple-500 lg:w-96 w-80 ">
-                <img
-                  src={item.img}
-                  alt={item.alt}
-                  className="rounded-t-2xl "
-                ></img>
-                <div className="space-y-1 p-2">
-                  <div className="flex items-center gap-1 text-lg font-semibold">
+          <div className="lg:px-10 mt-10 ">
+            <div className="flex flex-wrap justify-center gap-10 ">
+              {best.map((product) => (
+                <div className="border rounded-2xl shadow-2xl shadow-purple-500 lg:w-96 w-80 ">
+                  <img
+                    src={product.img}
+                    alt={product.alt}
+                    className="rounded-t-2xl "
+                  ></img>
+                  <h1 className="text-xl font-bold px-3 mt-2">
+                    {product.name}
+                  </h1>
+                  <div className="flex items-center gap-1 text-lg font-semibold px-3">
                     <MdVerified />
-                    <h3>{item.com}</h3>
+                    <h3 className="text-lg font-semibold">{product.com}</h3>
                   </div>
-                  <h2 className="text-lg font-semibold">{item.star}</h2>
-                  <div className="flex items-center text-xl font-semibold">
-                    <h2>{item.pri}</h2>
-                    <RiPriceTag3Line />
+                  <div className="flex justify-center items-center gap-10  ">
+                    <div className="px-3 space-y-1">
+                      <div className="flex items-center gap-2">
+                        <h3 className="text-lg font-semibold">
+                          {product.rate}
+                        </h3>
+                        <FaStar />
+                      </div>
+
+                      <div className="flex items-center gap-2">
+                        <h3 className="text-lg font-semibold">{product.pri}</h3>
+                        <RiPriceTag3Line />
+                      </div>
+                    </div>
+                    <div
+                      className="flex justify-center items-center gap-4 px-3 py-2 bg-blue-500 rounded-2xl w-[10rem] h-[3rem] "
+                      onClick={() => addcart(product)}
+                    >
+                      <FaCartShopping className="text-2xl" />
+                      <button className="text-lg font-semibold">
+                        Add Cart
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 
-        <div className="lg:px-10 ">
-          <Title title="Why Choose SM CAFE?" />
+        <div className="lg:px-10 mt-20 ">
+          <Title title="Why Choose SM CAFE?"
+          subtitle="Unmatched Flavors, Quality, and Community Connection." />
 
-          <div className="flex flex-wrap gap-5 justify-center">
+          <div className="flex flex-wrap gap-5 justify-center mt-10">
             {choose.map((sm) => (
               <div className="border p-5 rounded-2xl space-y-3 shadow-2xl w-80 lg:w-96 ">
                 <div className="flex justify-center">
@@ -229,9 +295,7 @@ function Home() {
             ))}
           </div>
         </div>
-        <div className="py-10">
-          <Swp />
-        </div>
+        
 
         <Foot />
       </div>

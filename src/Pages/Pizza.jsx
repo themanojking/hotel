@@ -11,8 +11,8 @@ function Pizza() {
   const pizza = [
     {
       id:'1',
-      img: "/Images/pizza-with-cheese-tomatoes.avif",
-      alt: "beefmushroom",
+      img: "/Images/cornpizza.avif",
+      alt: "cheese pizza",
       name:'Cheese Pizza',
       com: "SM Cafe",
       rate: "4.0/5.0",
@@ -20,36 +20,36 @@ function Pizza() {
     },
     {
       id:'2',
-      img: "/Images/pizza-with-cheese-tomatoes.avif",
-      alt: "beefmushroom",
-      name:'Cheese Pizza',
+      img: "/Images/mush1.avif",
+      alt: "Veg Pizza",
+      name:'Veg Pizza',
       com: "SM Cafe",
       rate: "4.0/5.0",
       pri: "$99.00",
     },
     {
       id:'3',
-      img: "/Images/pizza-with-cheese-tomatoes.avif",
-      alt: "beefmushroom",
-      name:'Cheese Pizza',
+      img: "/Images/tomatopizza.jpg",
+      alt: "Tomato Pizza",
+      name:'Tomato Pizza',
       com: "SM Cafe",
       rate: "4.0/5.0",
       pri: "$99.00",
     },
     {
       id:'4',
-      img: "/Images/pizza-with-cheese-tomatoes.avif",
-      alt: "beefmushroom",
-      name:'Cheese Pizza',
+      img: "/Images/mushroompizza.avif",
+      alt: "Mushroom Pizza",
+      name:'Mushroom Pizza',
       com: "SM Cafe",
       rate: "4.0/5.0",
       pri: "$99.00",
     },
     {
       id:'5',
-      img: "/Images/pizza-with-cheese-tomatoes.avif",
-      alt: "beefmushroom",
-      name:'Cheese Pizza',
+      img: "/Images/cheesepizza.avif",
+      alt: "Corn Pizza",
+      name:'Corn Pizza',
       com: "SM Cafe",
       rate: "4.0/5.0",
       pri: "$99.00",
@@ -68,7 +68,7 @@ function Pizza() {
       <Nav />
       <Footnav />
 
-      <div className="flex flex-wrap justify-center gap-6">
+      <div className="flex flex-wrap justify-center gap-10 mt-10 mx-10">
         {pizza.map((product) => (
           <div className="border shadow-2xl rounded-2xl w-96">
             <img
@@ -76,7 +76,7 @@ function Pizza() {
               alt={product.alt}
               className="rounded-t-2xl"
             ></img>
-            <h1 className="text-xl font-bold px-3 mt-2">{product.name}</h1>
+            <h1 className="text-xl font-bold px-3 mt-2 text-red-600">{product.name}</h1>
             <div className="flex items-center gap-1 text-lg font-semibold px-3">
               <MdVerified />
               <h3 className="text-lg font-semibold">{product.com}</h3>

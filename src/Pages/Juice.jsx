@@ -11,45 +11,64 @@ function Juice() {
   const juice = [
     {
       id:'11',
-      img: "/Images/pizza-with-cheese-tomatoes.avif",
-      alt: "beefmushroom",
-      name:'Cheese Pizza',
+      img: "/Images/mojito3.avif",
+      alt: "Mojito",
+      name:'Mojito',
       com: "SM Cafe",
       rate: "4.0/5.0",
       pri: "$99.00",
     },
     {
       id:'12',
-      img: "/Images/pizza-with-cheese-tomatoes.avif",
-      alt: "beefmushroom",
-      name:'Cheese Pizza',
+      img: "/Images/glass198.jpg",
+      alt: "Lemonade",
+      name:'Lemon Soda',
       com: "SM Cafe",
       rate: "4.0/5.0",
       pri: "$99.00",
     },
     {
       id:'13',
-      img: "/Images/pizza-with-cheese-tomatoes.avif",
-      alt: "beefmushroom",
-      name:'Cheese Pizza',
+      img: "/Images/mojito4.avif",
+      alt: "Salt Soda",
+      name:'Salt Soda',
       com: "SM Cafe",
       rate: "4.0/5.0",
       pri: "$99.00",
     },
     {
       id:'14',
-      img: "/Images/pizza-with-cheese-tomatoes.avif",
-      alt: "beefmushroom",
-      name:'Cheese Pizza',
+      img: "/Images/ice2.avif",
+      alt: "Ice Cream",
+      name:'Ice Cream',
+      com: "SM Cafe",
+      rate: "4.0/5.0",
+      pri: "$99.00",
+    },
+   
+    {
+      id:'15',
+      img: "/Images/cup.avif",
+      alt: "Cup Ice Cream",
+      name:'Cup Ice Cream',
       com: "SM Cafe",
       rate: "4.0/5.0",
       pri: "$99.00",
     },
     {
-      id:'15',
-      img: "/Images/pizza-with-cheese-tomatoes.avif",
-      alt: "beefmushroom",
-      name:'Cheese Pizza',
+      id:'16',
+      img: "/Images/rose.jpg",
+      alt: "Rosemilk Shake",
+      name:'Rosemilk Shake',
+      com: "SM Cafe",
+      rate: "4.0/5.0",
+      pri: "$99.00",
+    },
+    {
+      id:'17',
+      img: "/Images/chocolateshake.jpg",
+      alt: "Chocolate Shake",
+      name:'Chocolate Shake',
       com: "SM Cafe",
       rate: "4.0/5.0",
       pri: "$99.00",
@@ -67,7 +86,7 @@ function Juice() {
     <>
       <Nav />
       <Footnav />
-      <div className="flex flex-wrap justify-center gap-6">
+      <div className="flex flex-wrap justify-center gap-10 mt-10">
         {juice.map((product) => (
           <div key={product.id} className="border shadow-2xl rounded-2xl w-96">
             <img
@@ -75,7 +94,7 @@ function Juice() {
               alt={product.alt}
               className="rounded-t-2xl"
             ></img>
-            <h1 className="text-xl font-bold px-3 mt-2">{product.name}</h1>
+            <h1 className="text-xl font-bold px-3 mt-2 text-red-600">{product.name}</h1>
             <div className="flex items-center gap-1 text-lg font-semibold px-3">
               <MdVerified />
               <h3 className="text-lg font-semibold">{product.com}</h3>
