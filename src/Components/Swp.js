@@ -15,7 +15,7 @@ export default function Swp() {
     { id: '5', img: '/Images/maggi.avif', title: 'Maggi' },
     { id: '6', img: '/Images/cheesemag.jpg', title: 'Cheese Maggi' },
     { id: '7', img: '/Images/momo.avif', title: 'Momos' },
-    { id: '8', img: '/Images/mojitopic.avif', title: 'Mojito' },
+    { id: '8', img: '/Images/mojito3.avif', title: 'Mojito' },
     { id: '9', img: '/Images/icecream.avif', title: 'Icecream' },
   
   ];

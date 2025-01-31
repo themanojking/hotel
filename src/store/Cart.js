@@ -22,7 +22,7 @@ function Cart() {
         {productcart.map((product) => (
           <div key={product.id} className="border rounded-2xl shadow-xl w-80 ">
             <img src={product.img} alt="" className="rounded-t-2xl"></img>
-            <h1 className="text-xl font-bold px-3 mt-2">{product.name}</h1>
+            <h1 className="text-xl font-bold px-3 mt-2 text-red-600">{product.name}</h1>
             <div className="flex items-center gap-1 text-lg font-semibold px-3">
               <MdVerified />
               <h3 className="text-lg font-semibold">{product.com}</h3>

@@ -107,7 +107,7 @@ function Home() {
       pri: "$99.00",
     },
     {
-      img: "/Images/mojitopic.avif",
+      img: "/Images/mojito3.avif",
       name:'Mojito',
       com: "SM Cafe",
       rate: "4.0/5.0",
