@@ -186,7 +186,7 @@ function Home() {
         <Nav />
         <div className="flex flex-wrap lg:flex-nowrap gap-10 ">
           <div className="p-5 lg:p-10 lg:mt-[5rem] space-y-3">
-            <h1 className="text-3xl font-bold">
+            <h1 className="text-xl md:text-3xl  font-bold text-red-600">
               Discover Delight at Fastfood SM
             </h1>
             <h1 className="text-3xl lg:text-5xl font-bold">

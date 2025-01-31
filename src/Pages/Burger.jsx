@@ -67,7 +67,7 @@ function Burger() {
       <Nav />
       <Footnav />
       <div>
-        <div className="flex flex-wrap justify-center gap-10 mt-10">
+        <div className="flex flex-wrap justify-center gap-10 mt-10 mx-10">
           {burger.map((product) => (
             <div
               key={product.id}

@@ -86,7 +86,7 @@ function Juice() {
     <>
       <Nav />
       <Footnav />
-      <div className="flex flex-wrap justify-center gap-10 mt-10">
+      <div className="flex flex-wrap justify-center gap-10 mt-10 mx-10">
         {juice.map((product) => (
           <div key={product.id} className="border shadow-2xl rounded-2xl w-96">
             <img

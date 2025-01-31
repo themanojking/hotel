@@ -59,7 +59,7 @@ function Noodules() {
     <>
       <Nav />
       <Footnav />
-      <div className="flex flex-wrap justify-center gap-10 mt-10">
+      <div className="flex flex-wrap justify-center gap-10 mt-10 mx-10">
         {noodules.map((product) => (
           <div className="border shadow-2xl w-96 rounded-2xl">
             <img
