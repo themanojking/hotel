@@ -12,7 +12,7 @@ function Nav() {
     <header className='flex justify-between items-center p-5 bg-white shadow-md'>
       {/* Logo */}
       <div>
-        <h1 className='text-2xl font-bold'>SM CAFE</h1>
+        <h1 className='text-2xl font-bold text-red-600'>SM CAFE</h1>
       </div>
 
       {/* Desktop Nav */}
