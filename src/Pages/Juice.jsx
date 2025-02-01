@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { add } from "../store/Cartslice";
 import Nav from "../Components/Nav";
 import Footnav from "../Components/Footnav";
+import Foot from "../Components/Foot";
 
 function Juice() {
   const juice = [
@@ -88,7 +89,7 @@ function Juice() {
       <Footnav />
       <div className="flex flex-wrap justify-center gap-10 mt-10 mx-10">
         {juice.map((product) => (
-          <div key={product.id} className="border shadow-2xl rounded-2xl w-96">
+          <div key={product.id} className="border shadow-2xl rounded-2xl w-96 hover:scale-110">
             <img
               src={product.img}
               alt={product.alt}
@@ -121,6 +122,7 @@ function Juice() {
             </div>
           </div>
         ))}
+         <Foot/>
       </div>
     </>
   );

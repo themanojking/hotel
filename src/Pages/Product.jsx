@@ -7,6 +7,7 @@ import { MdVerified } from "react-icons/md";
 import { RiPriceTag3Line } from "react-icons/ri";
 import { FaStar } from "react-icons/fa6";
 import { FaCartShopping } from "react-icons/fa6";
+import Foot from "../Components/Foot";
 
 function Product() {
   const dispatch = useDispatch();
@@ -213,9 +214,9 @@ function Product() {
     <>
       <Nav />
       <Footnav />
-      <div className="flex flex-wrap justify-center gap-6 mt-20 ">
+      <div className="flex flex-wrap justify-center gap-20 mt-20 ">
         {pizza.map((product) => (
-          <div className="border rounded-2xl w-80">
+          <div className="border rounded-2xl w-80 hover:scale-110">
             <img
               src={product.img}
               alt={product.alt}
@@ -248,6 +249,8 @@ function Product() {
             </div>
           </div>
         ))}
+
+         <Foot />
       </div>
     </>
   );

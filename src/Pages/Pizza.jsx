@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { add } from "../store/Cartslice";
 import Nav from "../Components/Nav";
 import Footnav from "../Components/Footnav";
+import Foot from "../Components/Foot";
 
 function Pizza() {
   const pizza = [
@@ -68,9 +69,9 @@ function Pizza() {
       <Nav />
       <Footnav />
 
-      <div className="flex flex-wrap justify-center gap-10 mt-10 mx-10">
+      <div className="flex flex-wrap justify-center gap-10 mt-10 mx-10 ">
         {pizza.map((product) => (
-          <div className="border shadow-2xl rounded-2xl w-96">
+          <div className="border shadow-2xl rounded-2xl w-96 hover:scale-110">
             <img
               src={product.img}
               alt={product.alt}
@@ -103,6 +104,7 @@ function Pizza() {
             </div>
           </div>
         ))}
+        <Foot/>
       </div>
     </>
   );

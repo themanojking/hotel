@@ -6,6 +6,7 @@ import Footnav from "../Components/Footnav";
 import { MdVerified } from "react-icons/md";
 import { RiPriceTag3Line } from "react-icons/ri";
 import { FaCartShopping,FaStar } from "react-icons/fa6";
+import Foot from "../Components/Foot";
 
 function Burger() {
   const burger = [
@@ -71,7 +72,7 @@ function Burger() {
           {burger.map((product) => (
             <div
               key={product.id}
-              className="border rounded-2xl shadow-2xl w-96"
+              className="border rounded-2xl shadow-2xl w-96 hover:scale-110"
             >
               <img
                 src={product.img}
@@ -106,6 +107,7 @@ function Burger() {
             </div>
           ))}
         </div>
+         <Foot/>
       </div>
     </>
   );

@@ -3,6 +3,7 @@ import { IoIosRestaurant } from "react-icons/io";
 import { FaMailBulk } from "react-icons/fa";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import Nav from '../Components/Nav';
+import Foot from '../Components/Foot';
 
 function Contact() {
   return (
@@ -43,10 +44,7 @@ function Contact() {
               </div>
             </div>
           </div>
-
-          <div className='text-center mt-10'>
-             <h1 className='text-4xl font-bold'>Get in Touch with FastFood TNC</h1>
-          </div>
+           <Foot/>
       </div>
    
    

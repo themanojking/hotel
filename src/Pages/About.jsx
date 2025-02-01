@@ -6,6 +6,9 @@ import { FaTruckArrowRight } from "react-icons/fa6";
 import { BsCashCoin } from "react-icons/bs";
 import { FaMedal } from "react-icons/fa";
 import { FaGifts } from "react-icons/fa";
+import Chefswp from '../Components/Chefswp'
+import Title from '../Components/Tittle';
+import Foot from '../Components/Foot';
 // import ScrollTrigger from 'react-scroll-trigger';
 
 
@@ -16,7 +19,7 @@ function About() {
   return (
     <>
         <Nav />
-         <div className='lg:flex  justify-center gap-10 px-10 items-center'>
+         <div className='lg:flex  justify-center gap-10 px-10 items-center mt-20'>
             <div className='lg:w-[50%]'>
                 <img src='/Images/hotel.jpg' alt='hotel' className='rounded-tl-[35%]'></img>
             </div>
@@ -60,30 +63,38 @@ function About() {
          <div className='lg:flex justify-center md:grid grid-cols-2  p-2 border shadow-xl rounded-xl items-center'>
             <div className='text-center lg:border-r-2 md:border-r-2   py-10 lg:px-[6%] space-y-2 '>
                <div className='flex justify-center'>
-                 <FaTruckArrowRight className='text-5xl'/>
+                 <FaTruckArrowRight className='text-5xl text-red-600'/>
                </div>
               <h2 className='text-lg font-bold'>Free Shipping Purchase Upto $200</h2>
             </div>
             <div className='text-center lg:border-r-2 md:border-b-2 lg:border-b-0  py-10  lg:px-[6%] space-y-2 '>
                <div className='flex justify-center'>
-                <BsCashCoin  className='text-5xl'/>
+                <BsCashCoin  className='text-5xl text-red-600'/>
                </div>
               <h2 className='text-lg font-bold'>Pay on Delivery</h2>
             </div>
             <div className='text-center lg:border-r-2 md:border-t-2 lg:border-t-0 py-10  lg:px-[6%] space-y-2 '>
                <div className='flex justify-center'>
-               <FaMedal className='text-5xl'/>
+               <FaMedal className='text-5xl text-red-600'/>
                </div>
               <h2 className='text-lg font-bold'>100% Quality</h2>
             </div>
             <div className='text-center md:border-l-2 lg:border-l-0 py-10 lg:px-[6%] space-y-2 '>
                <div className='flex justify-center'>
-               <FaGifts className='text-5xl'/>
+               <FaGifts className='text-5xl text-red-600'/>
                </div>
               <h2 className='text-lg font-bold'>Wining Rewards</h2>
             </div>
          </div>
          </div>
+
+          <div className='mt-20'>
+              <Title title="Our expert chef"
+              subtitle="Unmatched Flavors, Quality, and Community Connection."/>
+             <Chefswp />
+          </div>
+
+          <Foot />
 
     
     

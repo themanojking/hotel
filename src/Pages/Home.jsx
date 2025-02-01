@@ -58,6 +58,7 @@ function Home() {
 
   const best = [
     {
+      id:'1',
       img: "/Images/pizza-with-cheese-tomatoes.avif",
       name:'Pizza',
       com: "SM Cafe",
@@ -65,6 +66,7 @@ function Home() {
       pri: "$99.00",
     },
     {
+      id:'2',
       img: "/Images/chickenpic.avif",
       name:'Chicken Pizza',
       com: "SM Cafe",
@@ -72,6 +74,7 @@ function Home() {
       pri: "$99.00",
     },
     {
+      id:'3',
       img: "/Images/burgerpic.avif",
       name:'Burger',
       com: "SM Cafe",
@@ -79,6 +82,7 @@ function Home() {
       pri: "$99.00",
     },
     {
+      id:'4',
       img: "/Images/chickenbur.jpg",
       name:'Chicken Burger',
       com: "SM Cafe",
@@ -86,6 +90,7 @@ function Home() {
       pri: "$99.00",
     },
     {
+      id:'5',
       img: "/Images/maggi.avif",
       name:'Maggi',
       com: "SM Cafe",
@@ -93,6 +98,7 @@ function Home() {
       pri: "$99.00",
     },
     {
+      id:'6',
       img: "/Images/cheesemag.jpg",
       name:'Cheese Maggi',
       com: "SM Cafe",
@@ -100,6 +106,7 @@ function Home() {
       pri: "$99.00",
     },
     {
+      id:'7',
       img: "/Images/momo.avif",
       name:'Momo',
       com: "SM Cafe",
@@ -107,6 +114,7 @@ function Home() {
       pri: "$99.00",
     },
     {
+      id:'8',
       img: "/Images/mojito3.avif",
       name:'Mojito',
       com: "SM Cafe",
@@ -114,6 +122,7 @@ function Home() {
       pri: "$99.00",
     },
     {
+      id:'9',
       img: "/Images/icecream.avif",
       name:'Icecream',
       com: "SM Cafe",
@@ -234,7 +243,7 @@ function Home() {
           <div className="lg:px-10 mt-10 ">
             <div className="flex flex-wrap justify-center gap-10 ">
               {best.map((product) => (
-                <div className="border rounded-2xl shadow-2xl shadow-purple-500 lg:w-96 w-80 ">
+                <div key={product.id} className="border rounded-2xl shadow-2xl shadow-purple-500 lg:w-96 w-80 ">
                   <img
                     src={product.img}
                     alt={product.alt}

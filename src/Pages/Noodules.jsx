@@ -7,6 +7,7 @@ import { MdVerified } from "react-icons/md";
 import { RiPriceTag3Line } from "react-icons/ri";
 import { FaCartShopping } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa6";
+import Foot from "../Components/Foot";
 
 function Noodules() {
   const noodules = [
@@ -61,7 +62,7 @@ function Noodules() {
       <Footnav />
       <div className="flex flex-wrap justify-center gap-10 mt-10 mx-10">
         {noodules.map((product) => (
-          <div className="border shadow-2xl w-96 rounded-2xl">
+          <div className="border shadow-2xl w-96 rounded-2xl hover:scale-110">
             <img
               src={product.img}
               alt={product.alt}
@@ -94,6 +95,7 @@ function Noodules() {
             </div>
           </div>
         ))}
+         <Foot/>
       </div>
     </>
   );

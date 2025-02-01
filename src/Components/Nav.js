@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import {  FaBars, FaTimes } from "react-icons/fa";
 import { FaCartShopping } from 'react-icons/fa6';
+import { ImSpoonKnife } from "react-icons/im";
+
 
 function Nav() {
   const cartproducts = useSelector(state => state.cart);
@@ -11,8 +13,13 @@ function Nav() {
   return (
     <header className='flex justify-between items-center p-5 bg-white shadow-md'>
       {/* Logo */}
-      <div>
-        <h1 className='text-2xl font-bold text-red-600'>SM CAFE</h1>
+      <div className='flex items-center gap-2'>
+        <div className='text-3xl font-bold'>
+           <ImSpoonKnife />
+        </div>
+         <div>
+          <h1 className='text-2xl font-bold text-red-600  '>SM CAFE</h1>
+         </div>
       </div>
 
       {/* Desktop Nav */}
